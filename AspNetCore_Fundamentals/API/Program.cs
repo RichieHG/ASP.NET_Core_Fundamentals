@@ -1,3 +1,6 @@
+using Application.Interfaces;
+using Application.Services;
+
 namespace API
 {
     public class Program
@@ -5,6 +8,10 @@ namespace API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Dependency Injection
+            builder.Services.AddScoped<IWarehouseService, WarehouseService>();
+
 
             // Add services to the container.
 
