@@ -18,7 +18,8 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult GetWarehouses()
         {
-            return Ok(_warehouseService.GetWarehouses());
+            return Ok(_warehouseService.GetWarehouses());            
+            //return Ok();
         }
 
         // /api/warehouse/byWarehouseId?warehouseId=3&warehouseName=Ricardo
